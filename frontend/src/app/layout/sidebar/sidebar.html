@@ -1,14 +1,12 @@
-<!-- 1. Envoltorio fijo a la pantalla (no hace scroll). 'pointer-events-none' evita que este fondo invisible bloquee los clics en tu web -->
 <div class="fixed inset-0 z-50 flex justify-center pointer-events-none">
-  <!-- 2. Contenedor que imita los límites de tu página principal -->
   <div class="relative w-full max-w-350">
-    <!-- 3. Tu Sidebar. 'pointer-events-auto' vuelve a activar los clics solo para los botones -->
     <aside
-      class="pointer-events-auto absolute left-0 top-40 flex -translate-x-1/2 flex-col items-center gap-6 bg-(--color-brand-purple-primary) px-3 py-6 text-white shadow-lg md:px-4 md:py-8"
+      class="pointer-events-auto absolute left-0 top-40 flex -translate-x-1/2 flex-col items-center gap-6 bg-(--color-brand-primary) px-3 py-6 text-white shadow-lg md:px-4 md:py-8"
     >
-      <!-- El resto de tus iconos SVG de redes sociales siguen igual aquí abajo... -->
       <a
-        href="#"
+        href="{{ data.socialLinks.github }} "
+        target="_blank"
+        rel="noopener noreferrer"
         class="transition-transform hover:scale-110 hover:text-gray-200"
         aria-label="Github"
       >
@@ -16,7 +14,9 @@
       </a>
 
       <a
-        href="#"
+        href="mailto:{{ data.socialLinks.gmail }} "
+        target="_blank"
+        rel="noopener noreferrer"
         class="transition-transform hover:scale-110 hover:text-gray-200"
         aria-label="Gmail"
       >
@@ -24,7 +24,9 @@
       </a>
 
       <a
-        href="#"
+        href="{{ data.socialLinks.linkdein }} "
+        target="_blank"
+        rel="noopener noreferrer"
         class="transition-transform hover:scale-110 hover:text-gray-200"
         aria-label="LinkedIn"
       >
@@ -32,7 +34,9 @@
       </a>
 
       <a
-        href="#"
+        href="{{ data.socialLinks.instagram }} "
+        target="_blank"
+        rel="noopener noreferrer"
         class="transition-transform hover:scale-110 hover:text-gray-200"
         aria-label="Instagram"
       >
@@ -40,7 +44,9 @@
       </a>
 
       <a
-        href="#"
+        href="{{ data.socialLinks.facebook }} "
+        target="_blank"
+        rel="noopener noreferrer"
         class="transition-transform hover:scale-110 hover:text-gray-200"
         aria-label="Facebook"
       >

@@ -1,51 +1,82 @@
-<header class="flex h-24 w-full items-center justify-between bg-white py-4">
-  <!-- Izquierda: Logo -->
-  <div class="flex items-center">
-    <a routerLink="/" class="text-3xl font-black tracking-tight text-gray-900"> Jace Torres. </a>
+<header class="relative w-full bg-(--color-brand-white) py-4">
+  <div class="flex h-15 w-full items-center justify-between">
+    <div class="flex items-center">
+      <a routerLink="/" class="text-3xl font-black tracking-tight text-gray-900">
+        {{ data.logo }}
+      </a>
+    </div>
+
+    <nav class="hidden md:flex items-center gap-8">
+      <button
+        (click)="scrollToSection('inicio')"
+        class="text-sm font-medium text-(--color-text-gray-800) transition hover:text-(--color-text-purple-600) cursor-pointer"
+      >
+        {{ data.sections[0].name }}
+      </button>
+
+      <button
+        (click)="scrollToSection('about')"
+        class="text-sm font-medium text-(--color-text-gray-800) transition hover:text-(--color-text-purple-600) cursor-pointer"
+      >
+        {{ data.sections[1].name }}
+      </button>
+
+      <button
+        (click)="scrollToSection('projects')"
+        class="text-sm font-medium text-(--color-text-gray-800) transition hover:text-(--color-text-purple-600) cursor-pointer"
+      >
+        {{ data.sections[2].name }}
+      </button>
+
+      <button
+        (click)="scrollToSection('footer')"
+        class="text-sm font-medium text-(--color-text-gray-800) transition hover:text-(--color-text-purple-600) cursor-pointer"
+      >
+        {{ data.sections[3].name }}
+      </button>
+    </nav>
+
+    <button
+      (click)="toggleMenu()"
+      type="button"
+      class="cursor-pointer rounded-lg p-2 text-(--color-text-gray-500) transition hover:bg-(--color-brand-gray-100) hover:text-(--color-text-gray-900) md:hidden"
+      aria-label="Abrir menú"
+    >
+      <img src="assets/menu-dots.svg" alt="Icono de menú" class="h-8 w-8" />
+    </button>
   </div>
 
-  <!-- Derecha: Enlaces de navegación -->
-  <nav class="hidden md:flex items-center gap-8">
-    <a
-      routerLink="/"
-      routerLinkActive="text-purple-600"
-      [routerLinkActiveOptions]="{ exact: true }"
-      class="text-sm font-medium text-gray-800 transition hover:text-purple-600"
+  @if (isMenuOpen) {
+    <nav
+      class="mt-2 flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-xl border border-gray-100 md:hidden"
     >
-      Inicio
-    </a>
+      <button
+        (click)="scrollToSection('inicio')"
+        class="text-left text-base font-semibold text-(--color-text-gray-800) transition hover:text-(--color-text-purple-600) cursor-pointer"
+      >
+        {{ data.sections[0].name }}
+      </button>
 
-    <a
-      routerLink="/about"
-      routerLinkActive="text-purple-600"
-      class="text-sm font-medium text-gray-800 transition hover:text-purple-600"
-    >
-      Sobre mí
-    </a>
+      <button
+        (click)="scrollToSection('about')"
+        class="text-left text-base font-semibold text-(--color-text-gray-800) transition hover:text-(--color-text-purple-600) cursor-pointer"
+      >
+        {{ data.sections[1].name }}
+      </button>
 
-    <a
-      routerLink="/projects"
-      routerLinkActive="text-purple-600"
-      class="text-sm font-medium text-gray-800 transition hover:text-purple-600"
-    >
-      Mi vida
-    </a>
+      <button
+        (click)="scrollToSection('projects')"
+        class="text-left text-base font-semibold text-(--color-text-gray-800) transition hover:text-(--color-text-purple-600) cursor-pointer"
+      >
+        {{ data.sections[2].name }}
+      </button>
 
-    <a
-      routerLink="/footer"
-      routerLinkActive="text-purple-600"
-      class="text-sm font-medium text-gray-800 transition hover:text-purple-600"
-    >
-      Sígueme
-    </a>
-  </nav>
-
-  <!-- Botón de menú para móviles (se oculta en pantallas grandes) -->
-  <button
-    type="button"
-    class="rounded-lg p-2 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 md:hidden"
-    aria-label="Abrir menú"
-  >
-    ☰
-  </button>
+      <button
+        (click)="scrollToSection('footer')"
+        class="text-left text-base font-semibold text-(--color-text-gray-800) transition hover:text-(--color-text-purple-600) cursor-pointer"
+      >
+        {{ data.sections[3].name }}
+      </button>
+    </nav>
+  }
 </header>

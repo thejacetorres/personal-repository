@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AboutComponent } from '../about/about';
 import { ProjectsComponent } from '../projects/projects';
 import { FooterComponent } from '../footer/footer';
+import { SITE_DATA } from '../../app.constants';
 
 @Component({
   selector: 'app-home',
@@ -10,4 +11,5 @@ import { FooterComponent } from '../footer/footer';
   templateUrl: './home.html'
 })
 export class HomeComponent {
+  data = SITE_DATA;
 }
