@@ -1,14 +1,15 @@
-<!-- Contenedor principal que ocupa todo el ancho disponible y al menos 700px de alto -->
-<section id="about" class="flex min-h-175 w-full bg-(--color-brand-primary-white) mb-24">
-  <!-- Mitad Izquierda: Contenido de Texto -->
-  <div class="flex w-1/2 flex-col justify-center px-12 md:px-16 lg:px-24">
+<!-- Contenedor principal -->
+<section id="about" class="flex min-h-175 w-full bg-(--color-brand-primary-white) mb-15">
+  
+  <!-- Columna de Texto: Ocupa todo el ancho (w-full) en móvil y la mitad (md:w-1/2) en pantallas grandes -->
+  <div class="flex w-full flex-col justify-center px-6 py-12 sm:px-10 md:w-1/2 md:px-16 lg:px-24">
     <h2
-      class="text-5xl font-black uppercase leading-tight tracking-tight text-gray-900 md:text-6xl"
+      class="text-4xl font-black uppercase leading-tight tracking-tight text-gray-900 sm:text-5xl md:text-6xl"
     >
       Descubre<br />quién soy
     </h2>
 
-    <div class="my-10 flex flex-col gap-6 pr-4 text-sm leading-relaxed text-gray-500 md:text-base">
+    <div class="my-8 flex flex-col gap-6 text-sm leading-relaxed text-gray-500 md:my-10 md:pr-4 md:text-base">
       <p>
         {{ data.about.part1 }}
       </p>
@@ -26,8 +27,9 @@
     </a>
   </div>
 
+  <!-- Columna de Imagen: Oculta por defecto en celular (hidden) y visible solo desde tablets/escritorio (md:flex) -->
   <div
-    class="relative w-1/2 border-l-32 border-(--color-brand-primary) bg-(--color-brand-secundary) flex items-end justify-center"
+    class="relative hidden w-1/2 border-l-32 border-(--color-brand-primary) bg-(--color-brand-secundary) md:flex items-end justify-center"
   >
     <img
       src="/assets/photo-about.png"
@@ -35,4 +37,5 @@
       class="max-h-[90%] w-auto object-contain"
     />
   </div>
+  
 </section>
