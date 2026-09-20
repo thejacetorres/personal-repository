@@ -1,0 +1,39 @@
+<!-- Contenedor principal que ocupa todo el ancho disponible y al menos 700px de alto -->
+<section class="flex min-h-175 w-full bg-(--color-brand-purple-white) mb-24">
+  
+  <!-- Mitad Izquierda: Contenido de Texto -->
+  <div class="flex w-1/2 flex-col justify-center px-12 md:px-16 lg:px-24">
+    
+    <!-- Título Principal -->
+    <h2 class="text-5xl font-black uppercase leading-tight tracking-tight text-gray-900 md:text-6xl">
+      Descubre<br />quién soy
+    </h2>
+    
+    <!-- Párrafos -->
+    <div class="my-10 flex flex-col gap-6 pr-4 text-sm leading-relaxed text-gray-500 md:text-base">
+      <p>
+        Párrafo. Haz clic para editar y agregar tu propio texto. Es fácil. Haz clic en "Editar Texto" o doble clic aquí para agregar tu contenido y cambiar la fuente. Puedes arrastrar y soltar este texto donde quieras en tu página.
+      </p>
+      <p>
+        Este es un buen espacio para extenderte sobre tu empresa y servicios. Puedes usar este espacio para incorporar más detalles sobre tu empresa. Escribe sobre tu personal y los servicios que ofreces.
+      </p>
+    </div>
+
+    <!-- Botón -->
+    <!-- w-fit hace que el botón solo sea tan ancho como su texto, no todo el contenedor -->
+    <button class="w-fit bg-(--color-brand-purple-primary) px-10 py-3 text-sm font-semibold text-(--color-brand-white) cursor-pointer">
+      Sígueme
+    </button>
+    
+  </div>
+
+  <!-- Mitad Derecha: Imagen con la franja morada -->
+  <!-- Usamos border-l-[32px] para crear la barra morada gruesa a la izquierda de la foto -->
+  <div 
+    class="w-1/2 border-l-32 border-(--color-brand-purple-primary) bg-(--color-brand-aqua) bg-cover bg-center bg-no-repeat"
+    style="background-image: url('/tu-imagen-about.png');"
+  >
+    <!-- La imagen se carga como fondo para que siempre llene la mitad derecha perfectamente sin distorsionarse -->
+  </div>
+
+</section>

@@ -1,0 +1,23 @@
+<!-- app.html o shell.html -->
+
+<!-- Fondo completamente blanco -->
+<div class="min-h-screen bg-white">
+  <!-- Contenedor central que limita el ancho y centra todo -->
+  <!-- Modifica 'max-w-[1400px]' si necesitas que sea más ancho o angosto -->
+  <!-- <div class="mx-auto flex max-w-[1400px] flex-col"> -->
+  <div class="relative mx-auto flex max-w-350 flex-col">
+    <!-- Tu Navbar ya creado -->
+    <app-navbar></app-navbar>
+
+    <!-- El componente de la franja morada (Sidebar) -->
+    <!-- Como es 'fixed', se posicionará respecto a la pantalla, no al contenedor -->
+    <app-sidebar></app-sidebar>
+
+    <!-- Aquí se cargan las páginas (como el Home con la imagen) -->
+    <main class="grow">
+      <router-outlet></router-outlet>
+    </main>
+
+    <app-chat-button></app-chat-button>
+  </div>
+</div>

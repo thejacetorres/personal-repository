@@ -1,0 +1,102 @@
+<!-- Contenedor principal con el fondo morado -->
+<footer class="w-full bg-(--color-brand-purple-primary) py-20 text-(--color-brand-white) mb-15">
+  <!-- Contenedor central alineado con el resto de la web -->
+  <div class="mx-auto flex max-w-4xl flex-col px-8">
+    <!-- SECCIÓN SUPERIOR: Título y Redes -->
+    <div class="mb-10 flex flex-col items-center">
+      <h2 class="mb-5 text-center text-4xl font-bold uppercase md:text-5xl">No te pierdas nada</h2>
+
+      <div class="flex items-center gap-8 text-xl">
+        <a href="#" class="hover:text-gray-300">
+          <img src="icon-social/github.svg" alt="Github" class="h-6 w-6" />
+        </a>
+        <a href="#" class="hover:text-gray-300">
+          <img src="icon-social/gmail.svg" alt="Gmail" class="h-7 w-7" />
+        </a>
+        <a href="#" class="hover:text-gray-300">
+          <img src="icon-social/linkedin.svg" alt="LinkdIn" class="h-8 w-8" />
+        </a>
+        <a href="#" class="hover:text-gray-300">
+          <img src="icon-social/instagram.svg" alt="Instagram" class="h-6 w-6" />
+        </a>
+        <a href="#" class="hover:text-gray-300">
+          <img src="icon-social/facebook.svg" alt="Facebook" class="h-6 w-6" />
+        </a>
+      </div>
+    </div>
+
+    <!-- SECCIÓN INFERIOR: Dos Columnas -->
+    <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
+      <!-- Columna Izquierda: Textos y Contacto -->
+      <div class="flex flex-col">
+        <h3 class="mb-10 text-2xl font-bold uppercase">Escríbeme cuando quieras</h3>
+
+        <div class="mb-10">
+          <h4 class="mb-2 text-lg font-bold uppercase">Para consultas comerciales</h4>
+          <p class="font-light text-gray-200">{{ data.email }}</p>
+        </div>
+
+        <!-- Copyright empujado hacia el fondo -->
+        <p class="mt-auto text-xs font-light text-gray-200">
+          {{ data.copyright }}
+        </p>
+      </div>
+
+      <!-- Columna Derecha: Formulario -->
+      <form class="flex flex-col gap-6">
+        <div class="flex flex-col gap-2">
+          <label for="email" class="text-sm font-medium text-gray-200"
+            >Email <span class="text-red-400">*</span></label
+          >
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            autocomplete="email"
+            placeholder="ejemplo@misitio.com"
+            class="rounded-md border border-white bg-transparent px-3 py-2 text-white placeholder-gray-500 outline-none transition-all focus:border-white focus:bg-white/5 focus:ring-1 focus:ring-white"
+          />
+          <!-- Mensaje de advertencia mejorado con un SVG -->
+          <div class="flex items-center gap-1.5 text-xs text-gray-400 mt-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 text-blue-400"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span>Ingresa una dirección de correo válida.</span>
+          </div>
+        </div>
+
+        <!-- Fila 3: Mensaje -->
+        <div class="flex flex-col gap-2">
+          <label for="mensaje" class="text-sm font-medium text-gray-200">Déjanos un mensaje</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="4"
+            placeholder="¿En qué te podemos ayudar?"
+            class="resize-y rounded-md border border-white bg-transparent px-3 py-2 text-white placeholder-gray-500 outline-none transition-all focus:border-white focus:bg-white/5 focus:ring-1 focus:ring-white"
+          ></textarea>
+        </div>
+
+        <!-- Botón Enviar -->
+        <div class="flex justify-end pt-4">
+          <button
+            type="submit"
+            class="bg-white px-6 py-2.5 text-sm font-semibold text-black transition-all hover:bg-gray-200 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 active:scale-95 cursor-pointer"
+          >
+            Enviar Mensaje
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</footer>

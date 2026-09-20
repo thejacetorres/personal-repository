@@ -1,0 +1,51 @@
+<!-- 1. Envoltorio fijo a la pantalla (no hace scroll). 'pointer-events-none' evita que este fondo invisible bloquee los clics en tu web -->
+<div class="fixed inset-0 z-50 flex justify-center pointer-events-none">
+  <!-- 2. Contenedor que imita los límites de tu página principal -->
+  <div class="relative w-full max-w-350">
+    <!-- 3. Tu Sidebar. 'pointer-events-auto' vuelve a activar los clics solo para los botones -->
+    <aside
+      class="pointer-events-auto absolute left-0 top-40 flex -translate-x-1/2 flex-col items-center gap-6 bg-(--color-brand-purple-primary) px-3 py-6 text-white shadow-lg md:px-4 md:py-8"
+    >
+      <!-- El resto de tus iconos SVG de redes sociales siguen igual aquí abajo... -->
+      <a
+        href="#"
+        class="transition-transform hover:scale-110 hover:text-gray-200"
+        aria-label="Github"
+      >
+        <img src="icon-social/github.svg" alt="Github" class="h-6 w-6" />
+      </a>
+
+      <a
+        href="#"
+        class="transition-transform hover:scale-110 hover:text-gray-200"
+        aria-label="Gmail"
+      >
+        <img src="icon-social/gmail.svg" alt="Gmail" class="h-7 w-7" />
+      </a>
+
+      <a
+        href="#"
+        class="transition-transform hover:scale-110 hover:text-gray-200"
+        aria-label="LinkedIn"
+      >
+        <img src="icon-social/linkedin.svg" alt="LinkedIn" class="h-8 w-8" />
+      </a>
+
+      <a
+        href="#"
+        class="transition-transform hover:scale-110 hover:text-gray-200"
+        aria-label="Instagram"
+      >
+        <img src="icon-social/instagram.svg" alt="Instagram" class="h-6 w-6" />
+      </a>
+
+      <a
+        href="#"
+        class="transition-transform hover:scale-110 hover:text-gray-200"
+        aria-label="Facebook"
+      >
+        <img src="icon-social/facebook.svg" alt="Facebook" class="h-6 w-6" />
+      </a>
+    </aside>
+  </div>
+</div>

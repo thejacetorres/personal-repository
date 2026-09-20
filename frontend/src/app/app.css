@@ -1,0 +1,12 @@
+/* src/styles.css o src/app/app.css */
+@import "tailwindcss";
+
+@theme {
+  /* Creamos nuestros colores personalizados */
+  --color-brand-purple-primary: #6b21a8;
+  --color-brand-purple: #602ee1;
+  --color-brand-purple-dark: #4b23b3; /* Para los hovers */
+  --color-brand-aqua: #80D6D6;
+  --color-brand-white: #ffffff;
+  --color-brand-black: #000000;
+}

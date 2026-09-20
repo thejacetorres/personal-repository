@@ -1,0 +1,51 @@
+<header class="flex h-24 w-full items-center justify-between bg-white py-4">
+  <!-- Izquierda: Logo -->
+  <div class="flex items-center">
+    <a routerLink="/" class="text-3xl font-black tracking-tight text-gray-900"> Jace Torres. </a>
+  </div>
+
+  <!-- Derecha: Enlaces de navegación -->
+  <nav class="hidden md:flex items-center gap-8">
+    <a
+      routerLink="/"
+      routerLinkActive="text-purple-600"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="text-sm font-medium text-gray-800 transition hover:text-purple-600"
+    >
+      Inicio
+    </a>
+
+    <a
+      routerLink="/about"
+      routerLinkActive="text-purple-600"
+      class="text-sm font-medium text-gray-800 transition hover:text-purple-600"
+    >
+      Sobre mí
+    </a>
+
+    <a
+      routerLink="/projects"
+      routerLinkActive="text-purple-600"
+      class="text-sm font-medium text-gray-800 transition hover:text-purple-600"
+    >
+      Mi vida
+    </a>
+
+    <a
+      routerLink="/footer"
+      routerLinkActive="text-purple-600"
+      class="text-sm font-medium text-gray-800 transition hover:text-purple-600"
+    >
+      Sígueme
+    </a>
+  </nav>
+
+  <!-- Botón de menú para móviles (se oculta en pantallas grandes) -->
+  <button
+    type="button"
+    class="rounded-lg p-2 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 md:hidden"
+    aria-label="Abrir menú"
+  >
+    ☰
+  </button>
+</header>
